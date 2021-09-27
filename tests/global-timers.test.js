@@ -16,9 +16,11 @@ ruleTester.run('global-timers', rule, {
       errors: [
         {
           messageId: 'globalTimer',
+          data: { functionName: 'setTimeout'},
           suggestions: [
             {
               messageId: 'globalTimerFix',
+              data: { functionName: 'setTimeout'},
               output: `this.homey.setTimeout(function () { console.log(42) }, 100)`,
             },
           ],
@@ -31,9 +33,11 @@ ruleTester.run('global-timers', rule, {
       errors: [
         {
           messageId: 'globalTimer',
+          data: { functionName: 'setInterval'},
           suggestions: [
             {
               messageId: 'globalTimerFix',
+              data: { functionName: 'setInterval'},
               output: `this.homey.setInterval(function () { console.log(42) }, 100)`,
             },
           ],

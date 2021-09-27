@@ -24,6 +24,7 @@ module.exports = {
             suggest: [
               {
                 messageId: 'globalTimerFix',
+                data: { functionName },
                 fix(fixer) {
                   const original = sourceCode.getText(node);
                   const fixed = `this.homey.${original}`;
