@@ -2,7 +2,6 @@
 
 const { version } = require('./package.json');
 const globalTimersRule = require('./rules/global-timers');
-const { version } = require('./package.json');
 
 const plugin = {
   meta: {
