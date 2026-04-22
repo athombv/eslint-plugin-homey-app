@@ -2,6 +2,7 @@
 
 const { version } = require('./package.json');
 const globalTimersRule = require('./rules/global-timers');
+const homeyLogRule = require('./rules/homey-log');
 
 const plugin = {
   meta: {
@@ -11,6 +12,7 @@ const plugin = {
   configs: {},
   rules: {
     'global-timers': globalTimersRule,
+    'homey-log': homeyLogRule,
   },
 };
 
