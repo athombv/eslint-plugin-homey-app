@@ -1,11 +1,12 @@
 'use strict';
 
+const { version } = require('./package.json');
 const globalTimersRule = require('./rules/global-timers');
 
 const plugin = {
   meta: {
     name: 'eslint-plugin-homey-app',
-    version: '2.0.0',
+    version,
   },
   configs: {},
   rules: {
