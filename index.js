@@ -1,15 +1,30 @@
 'use strict';
 
-module.exports = {
-  rules: {
-    'global-timers': require('./rules/global-timers'),
+const { version } = require('./package.json');
+const globalTimersRule = require('./rules/global-timers');
+const homeyLogRule = require('./rules/homey-log');
+
+const plugin = {
+  meta: {
+    name: 'eslint-plugin-homey-app',
+    version,
   },
-  configs: {
-    recommended: {
-      plugins: ['homey-app'],
-      rules: {
-        'homey-app/global-timers': 'warn',
-      },
-    },
+  configs: {},
+  rules: {
+    'global-timers': globalTimersRule,
+    'homey-log': homeyLogRule,
   },
 };
+
+Object.assign(plugin.configs, {
+  recommended: {
+    plugins: {
+      'homey-app': plugin,
+    },
+    rules: {
+      'homey-app/global-timers': 'warn',
+    },
+  },
+});
+
+module.exports = plugin;
