@@ -51,7 +51,7 @@ jobs:
           VERSION="$(node -p "require('./package.json').version")"
           echo package_version=${VERSION} >> $GITHUB_ENV
 
-      # Ensure `packake.json .files` exists.
+      # Ensure `package.json .files` exists.
       - name: Verify
         run: |
           if ! cat package.json | jq -e .files; then
