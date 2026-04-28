@@ -15,6 +15,10 @@
     "eslint",
     "homey"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/athombv/eslint-plugin-homey-app"
+  },
   "author": "Athom B.V.",
   "license": "ISC",
   "engines": {
