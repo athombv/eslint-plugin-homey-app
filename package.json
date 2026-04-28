@@ -3,6 +3,10 @@
   "version": "1.0.2",
   "description": "Enforce best practices for Homey Apps",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "rules/"
+  ],
   "scripts": {
     "test": "node --test tests/*.test.js",
     "lint": "eslint ."
