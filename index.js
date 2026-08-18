@@ -17,10 +17,18 @@ const plugin = {
 };
 
 Object.assign(plugin.configs, {
+  // flat config
   recommended: {
     plugins: {
       'homey-app': plugin,
     },
+    rules: {
+      'homey-app/global-timers': 'warn',
+    },
+  },
+  // legacy eslintrc config
+  'legacy-recommended': {
+    plugins: ['homey-app'],
     rules: {
       'homey-app/global-timers': 'warn',
     },
