@@ -10,13 +10,22 @@ npm install --save-dev eslint-plugin-homey-app
 
 ## Usage
 
+### Flat config (`eslint.config.js`)
+
 ```js
-// eslint.config.js
 const homeyApp = require('eslint-plugin-homey-app');
 
 module.exports = [
-  homeyApp.configs.recommended,
+  homeyApp.configs['flat/recommended'],
 ];
+```
+
+### Legacy config (`.eslintrc`)
+
+```json
+{
+  "extends": ["plugin:homey-app/recommended"]
+}
 ```
 
 ## Rules
@@ -29,10 +38,3 @@ Warns when using global `setTimeout` or `setInterval` instead of `this.homey.set
 
 Warns when using `console.log` or `console.error` instead of `this.log` / `this.error`.
 
-## Legacy Config
-
-This plugin requires ESLint v10 and flat config. For legacy config support, install v1:
-
-```bash
-npm install --save-dev eslint-plugin-homey-app@1
-```
