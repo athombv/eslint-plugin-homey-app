@@ -31,6 +31,6 @@
     "eslint-plugin-n": "^17.24.0"
   },
   "peerDependencies": {
-    "eslint": ">=8.24.0"
+    "eslint": ">=8.40.0"
   }
 }
